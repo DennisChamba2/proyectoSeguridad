@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.header {
+    display: flex;
+    width: 100%;
+    background-color: #fff;
+    margin-top: 0;
+    padding: 20px;
+}
+
+.navbar a {
+    padding: 5px;
+    color: #E51636;
+    font-size: 1.1em;
+    font-weight: 700;
+    text-decoration: underline 0.1em rgba(0, 0, 0, 0);
+    text-underline-offset: 0.2em;
+    transition: 0.3s ease;
+}
+
+.navbar a:hover {
+    text-decoration-color: rgba(229, 22, 54, 1);
+}
+
+.fas {
+    transition: 0.2s ease;
+    font-size: 1.5em;
+}
+
+.fas:hover {
+    transform: scale(1.3);
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 50px;
+}
+
+form {
+    width: 60%;
+    max-width: 500px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    color: #182541;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+form input,
+form textarea,
+form button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    background-color: #E51636;
+    color: #fff;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #182541;
+}
+
+.footerbx {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.footerbx h2 {
+    color: #182541;
+    font-weight: 900;
+}
+
+.footer {
+    padding: 2em;
+}
+
+.footer a {
+    padding: 1rem;
+    font-size: 1.5em;
+    color: #E51636;
+}
+
+.fab {
+    transition: 0.3s ease;
+}
+
+.fab:hover {
+    transform: scale(1.5);
+}

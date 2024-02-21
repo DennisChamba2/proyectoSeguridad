@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+body {
+    scroll-behavior: smooth;
+}
+
+
+.header {
+    display: flex;
+    width: 100%;
+    background-color: #fff;
+    margin-top: 0;
+    padding: 20px;
+}
+
+.navbar a {
+    padding: 5px;
+    color: #E51636;
+    font-size: 1.1em;
+    font-weight: 700;
+    text-decoration: underline 0.1em rgba(0, 0, 0, 0);
+    text-underline-offset: 0.2em;
+    transition: 0.3s ease;
+}
+
+#chat {
+    
+    height: 50%;
+    margin: 20px auto;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+ul {
+    list-style: none;
+    padding: 10px;
+    overflow-y: auto;
+    max-height: 300px;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+#form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #fff;
+}
+
+#input {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 8px 12px;
+    background-color: #E51636;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #182541;
+}
+

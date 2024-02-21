@@ -1,0 +1,77 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chick-fil-A Menu</title>
+    <link rel="stylesheet" href="../css/menu.css">
+    <script src="./js/script.js" type="text/javascript"></script>
+    <script src="https://kit.fontawesome.com/4cf78acc70.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="header">
+        <div class="navbar">
+            <a href="/"><i class="fas fa-home"></i></a>
+            <a href="/menu">Menu</a>
+            <a href="/about">About</a>
+            <a href="/chat">Contact</a>
+            <a href="/registro">Registro administradores</a>
+            <a></a>
+            <a href="/cerrar-sesion">Cerrar sesión</a>
+        </div>
+    </div>
+
+    <div class="menu">
+        <h1>Menu</h1>
+    </div>
+
+  <div class="items">
+        <div class="row">
+            <div class="chicken">
+                <a href="/producto" target="blank">
+                  <img src="../img/pngwing.com.png" alt="Nuevo Producto" style="width: 100%;">
+                </a>
+                <a href="/producto" target="blank">Nuevo Producto</a>
+            </div>
+    </div>
+
+    {{#each platillosGrupos}}
+    <div class="items">
+      <div class="row">
+        {{#each this}}
+          <div class="chicken">
+            <img src="{{this.foto}}" alt="{{this.nombre}}" style="width: 100%;">
+            <a href="#" target="blank">{{this.nombre}}</a>
+            <h2>{{this.precio}} $</h2>
+
+            <div class="botones">
+            <button class="modificar-btn" onclick="modificarPlatillo('{{this.id}}')">Modificar</button>
+            <button class="eliminar-btn" onclick="eliminarPlatillo('{{this.id}}')">Eliminar</button>
+          </div>
+
+          </div>
+        {{/each}}
+      </div>
+    </div>
+  {{/each}}
+    
+     <div class="notice">
+         <p>This is only the good stuff. Not all menu items are shown.</p>
+    </div>
+
+        <div class="footerbx" id="contact">
+            <h2>Let's be friends</h2>
+            <div class="footer">
+                <a href="https://www.instagram.com/chickfila/?hl=en" target="blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://twitter.com/ChickfilA?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"
+                    target="blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.facebook.com/ChickfilA/" target="blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.youtube.com/user/chickfila/featured" target="blank"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+<script src="../js/menuAdmin.js"></script>
+</body>
+
+</html>

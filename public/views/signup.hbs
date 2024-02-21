@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link rel="stylesheet" href="../css/signup.css"> <!-- Puedes crear un nuevo archivo CSS para el registro si es necesario -->
+    <script src="https://kit.fontawesome.com/4cf78acc70.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <div class="header">
+        <div class="navbar">
+            <a href="/"><i class="fas fa-home"></i></a>
+            <a href="/menu">Menu</a>
+            <a href="/about">About</a>
+            <a href="/chat">Contact</a>
+        </div>
+    </div>
+
+    <div class="form-container">
+        <h1>Registro</h1>
+        <form action="/register" method="post" id="formulario">
+            <div class="form-group">
+                <label for="username">Usuario:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Contraseña:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="form-group">
+                <label for="confirm-password">Confirmar Contraseña:</label>
+                <input type="password" id="confirm_password" name="confirm_password" required>
+            </div>
+            <button type="submit">Registrar</button>
+            <a href="/login">¿Ya tienes cuenta?</a>
+        </form>
+    </div>
+
+    <div class="footerbx" id="contact">
+        <h2>Let's be friends</h2>
+        <div class="footer">
+            <a href="https://www.instagram.com/chickfila/?hl=en" target="blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://twitter.com/ChickfilA?ref_src=twsrc%5Egoogle%7Ctwcamp%5Es erp%7Ctwgr%5Eauthor"
+                target="blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.facebook.com/ChickfilA/" target="blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.youtube.com/user/chickfila/featured" target="blank"><i class="fab fa-youtube"></i></a>
+        </div>
+    </div>
+
+    <script src="../js/signup.js"></script>
+</body>
+
+</html>
