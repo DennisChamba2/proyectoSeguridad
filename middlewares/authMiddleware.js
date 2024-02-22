@@ -16,14 +16,14 @@ const requireAuthentication = (req, res, next) => {
     jwt.verify(csrfToken, SECRET_KEY);
     next();
   } catch (error) {
+    //En caso de no ser valido, redirige al login
     return res.redirect('/login');
-    
   }
 };
 
 // Middleware para eliminar la cookie al cerrar la página
 const deleteCookieOnClose = (req, res, next) => {
-  // Establecer una fecha de vencimiento para la cookie anterior a la fecha actual
+  
   const expiryDate = new Date(0);
   res.cookie('csrfToken', '', {
     expires: expiryDate,
