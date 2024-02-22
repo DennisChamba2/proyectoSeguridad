@@ -9,7 +9,18 @@ form.addEventListener("submit", function (event) {
         method: 'POST',
         body: formData
     })
-    .then(response => response.text())
+    .then(response => {
+        if (!response.ok) {
+            return response.json().then(data => {
+                if (response.status === 401) {
+                  window.alert(data.error);
+                }
+            }
+            )
+        }
+        // Si la respuesta es exitosa, extraer el token del cuerpo de la respuesta
+        return response.text();
+    })
     .then(data => {
         // Evitar que la respuesta se muestre directamente en la página
         event.preventDefault();
@@ -17,10 +28,13 @@ form.addEventListener("submit", function (event) {
             window.alert("Las contraseñas no coinciden")
         }
         if (data === "1") {
+            window.alert("Usuario Creado")
             document.location.href = '/login';
-        } else {
+        }
+        else {
             window.alert("creaccion fallida")
         }
+        
     })
     .catch(error => {
         window.alert("creacion fallida")
