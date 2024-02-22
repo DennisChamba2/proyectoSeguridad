@@ -16,7 +16,7 @@ const server = https.createServer({
 
 // const server = http.createServer(app);
 const wss = new WebSocket.Server({ server });
-
+//Establecemos la conexion
 wss.on('connection', (ws) => {
     ws.on('message', (message) => {
         console.log(message);
