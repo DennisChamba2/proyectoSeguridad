@@ -52,9 +52,6 @@ async function obtenerPlatillos() {
         //console.log(platillosSnapshot.docs[0].data()); // Accede a los documentos de la colección
         //console.log(platillosSnapshot.docs[0].id); // id del archivo
 
-
-
-
     } catch (error) {
         console.error("Error al obtener platillos:", error);
     }
