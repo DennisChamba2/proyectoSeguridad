@@ -1,4 +1,4 @@
-//import { sanitizeInput } from './sanitizeInputs.js';
+
 const socket = new WebSocket('wss://localhost:3000');
 
 socket.addEventListener('open', (event) => {
@@ -17,8 +17,7 @@ socket.addEventListener('message', (event) => {
 document.querySelector('#form').addEventListener('submit', (e) => {
     e.preventDefault();
     const message = document.querySelector('#input').value;
-    //Sanitizacion de los mensajes
-    //Sanitizedmessage = sanitizeInput(message);
+ 
     console.log(message);
     if (socket.readyState === WebSocket.OPEN) {
         socket.send(message);
