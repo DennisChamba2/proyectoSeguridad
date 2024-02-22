@@ -21,18 +21,18 @@ class Server {
   }
 
   middlewares(){
-    
+    //Permite la solicitud desde otros dominios
     this.app.use(cors());
     
     // Middleware para parsear datos codificados en URL en el cuerpo de la solicitud
     this.app.use(express.urlencoded({ extended: true }));
 
-    //parceo y lectura de body
+    //parceo y lectura de json y text en el body
     this.app.use(express.json()) 
     this.app.use(express.text())
 
 
-    //fileupload 
+    //Para subir archivos
     this.app.use(fileUpload({
       useTempFiles: true,
       tempFileDir: '/tmp/'
@@ -48,9 +48,8 @@ class Server {
     this.app.use(cookieParser());
 
   }
-
+  //Definimos las rutas dento de index,routers
   routes() {
-
     this.app.use(this.RoutePath, require('../routes/index.routes'))
  
   }
