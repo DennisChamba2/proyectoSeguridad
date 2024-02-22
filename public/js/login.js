@@ -12,7 +12,7 @@ form.addEventListener("submit", function (event) {
     })
     .then(response => {
         if (!response.ok) {
-            throw new Error('Error al iniciar sesión');
+            window.alert("Datos fuera del Rango")
         }
         // Si la respuesta es exitosa, extraer el token del cuerpo de la respuesta
         return response.json();
