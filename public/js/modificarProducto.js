@@ -45,3 +45,4 @@ function mostrarImagenSeleccionada() {
         vistaPrevia.innerHTML = '';
     }
 }
+
